@@ -1,0 +1,30 @@
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #a7beeb;
+  }
+  
+  .pic {
+    width: 400px;
+    height: 600px;
+    margin: 20px 0;
+  }
+  
+  .button {
+    background-color: cadetblue;
+    color: white;
+    padding: 15px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 1.3rem;
+  }
+  
+  .header {
+    color: cadetblue;
+    font-size: 2rem;
+  }

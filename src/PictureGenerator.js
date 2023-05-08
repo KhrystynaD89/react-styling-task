@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import './styles.css';
 
-const App = () => {
+
+const PictureGenerator = () => {
   const [picture, setPicture] = useState('https://picsum.photos/200/300');
 
   const changePicture = () => {
@@ -8,43 +10,45 @@ const App = () => {
     setPicture(newPicture);
   };
   //*styling
-  const stylingDiv = {
-    display: 'flex', 
-    flexDirection: 'column', 
-    alignItems: 'center', 
-    justifyContent: 'center', 
-    minHeight: '100vh', 
-    backgroundColor: '#F2F3F5' 
+//   const stylingDiv = {
+//     display: 'flex', 
+//     flexDirection: 'column', 
+//     alignItems: 'center', 
+//     justifyContent: 'center', 
+//     minHeight: '100vh', 
+//     backgroundColor: '#F2F3F5' 
     
     
-  }
+//   }
 
-  const stylingPic = {
-    width: '400px', 
-    height: '600px', 
-    margin: '20px 0'
-  }
+//   const stylingPic = {
+//     width: '400px', 
+//     height: '600px', 
+//     margin: '20px 0'
+//   }
 
-  const stylingBut = {
-    backgroundColor: 'cadetblue', 
-    color: 'white', 
-    padding: '15px 20px', 
-    marginTop: '20px',
-    border: 'none', 
-    borderRadius: '7px', 
-    cursor: 'pointer',
-    fontSize: '1.3rem' 
-  }
+//   const stylingBut = {
+//     backgroundColor: 'cadetblue', 
+//     color: 'white', 
+//     padding: '15px 20px', 
+//     marginTop: '20px',
+//     border: 'none', 
+//     borderRadius: '7px', 
+//     cursor: 'pointer',
+//     fontSize: '1.3rem' 
+//   }
 
   //*styling
 
   return (
-    <div style= {stylingDiv}>
-       <h1 style={{ color: 'cadetblue', fontSize: '2rem' }}>Random Picture Generator</h1>
-      <img src={picture} style={stylingPic}/>
-      <button onClick={changePicture} style={stylingBut}>Change Picture</button>
-    </div>
+    <div className="box">
+    <h1 className="header">Random Picture Generator</h1>
+    <img src={picture} className="pic" />
+    <button onClick={changePicture} className="button">
+      Change Picture
+    </button>
+  </div>
   );
 };
 
-export default App;
+export default PictureGenerator;
